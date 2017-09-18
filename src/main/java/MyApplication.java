@@ -1,3 +1,4 @@
+import domain.Employees;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -22,7 +23,8 @@ public class MyApplication {
             CreateDatabase.createTables(connection);
             LOGGER.info("Created database successfully");
 
-            ProcessXMLFile.unmarshalMyXmlFile();
+            XMLFileProcessor xMLFileProcessor = new XMLFileProcessor();
+            Employees employees = xMLFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
             LOGGER.info("XML File employees.xml has been processed successfully");
 
         } catch (Exception e) {

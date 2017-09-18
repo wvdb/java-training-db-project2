@@ -32,7 +32,7 @@ public class Employees {
                 '}';
     }
 
-    public static class Employee {
+    private static class Employee {
 //    public class Employee {
         private Integer id;
         private String name;
