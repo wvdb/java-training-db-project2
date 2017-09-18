@@ -1,4 +1,4 @@
-package domain;
+package be.ictdynamic.training.domain;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,3 +1,5 @@
+package be.ictdynamic.training;
+
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -10,7 +12,7 @@ import java.sql.Statement;
 public class CreateDatabase {
     private static final Logger LOGGER = Logger.getLogger(CreateDatabase.class);
 
-    static void createTables(Connection connection) {
+    public static void createTables(Connection connection) {
         String sql = "CREATE TABLE IF NOT EXISTS EMPLOYEE"  +
                 "(ID INT PRIMARY KEY            NOT NULL,"  +
                 " NAME           VARCHAR(50)    NOT NULL, " +

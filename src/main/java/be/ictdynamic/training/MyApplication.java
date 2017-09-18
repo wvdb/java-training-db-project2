@@ -1,7 +1,7 @@
-import domain.Employees;
+package be.ictdynamic.training;
+
+import be.ictdynamic.training.domain.Employees;
 import org.apache.log4j.Logger;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,13 +10,13 @@ import java.sql.SQLException;
 /**
  * Created by wvdbrand on 14/09/2017.
  */
-@SpringBootApplication
+//@SpringBootApplication
 public class MyApplication {
 
     private static final Logger LOGGER = Logger.getLogger(MyApplication.class);
 
     public static void main(String args[]) {
-        SpringApplication.run(MyApplication.class, args);
+//        SpringApplication.run(MyApplication.class, args);
 
         Connection connection = null;
 

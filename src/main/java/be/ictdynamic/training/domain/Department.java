@@ -1,4 +1,4 @@
-package domain;
+package be.ictdynamic.training.domain;
 
 /**
  * Created by wvdbrand on 6/09/2017.
