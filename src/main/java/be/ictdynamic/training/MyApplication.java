@@ -1,4 +1,6 @@
-import domain.Employees;
+package be.ictdynamic.training;
+
+import be.ictdynamic.training.domain.Employees;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -8,11 +10,14 @@ import java.sql.SQLException;
 /**
  * Created by wvdbrand on 14/09/2017.
  */
+//@SpringBootApplication
 public class MyApplication {
 
     private static final Logger LOGGER = Logger.getLogger(MyApplication.class);
 
     public static void main(String args[]) {
+//        SpringApplication.run(MyApplication.class, args);
+
         Connection connection = null;
 
         try {
@@ -23,8 +28,8 @@ public class MyApplication {
             CreateDatabase.createTables(connection);
             LOGGER.info("Created database successfully");
 
-            XMLFileProcessor xMLFileProcessor = new XMLFileProcessor();
-            Employees employees = xMLFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
+            XMLFileProcessor xmlFileProcessor = new XMLFileProcessor();
+            Employees employees = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
             LOGGER.info("XML File employees.xml has been processed successfully");
 
         } catch (Exception e) {

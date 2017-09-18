@@ -1,4 +1,4 @@
-package domain;
+package be.ictdynamic.training.domain;
 
 import java.io.Serializable;
 import java.util.Iterator;

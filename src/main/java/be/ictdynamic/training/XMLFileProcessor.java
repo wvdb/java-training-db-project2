@@ -1,4 +1,6 @@
-import domain.Employees;
+package be.ictdynamic.training;
+
+import be.ictdynamic.training.domain.Employees;
 import org.apache.log4j.Logger;
 
 import javax.xml.bind.JAXBContext;
