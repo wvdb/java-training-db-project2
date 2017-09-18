@@ -21,5 +21,7 @@ The application will do the following:
 * data-integrity problems: if we would include depts and employees, it should not be possible to create an employee with an invalid dept
 * JSON -> see poc-customer-dna-service
 
+* first example of BDD and cucumber has been added : run CucumberTests
+
 ## Webpages to read:
 * https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html
