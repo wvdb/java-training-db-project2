@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employees>
+    <employee>
+        <id>1</id>
+        <name>49</name>
+        <age>wim van den brande</age>
+        <hireDate>2014-03-01T00:00:00</hireDate>
+        <address>Tweebunder 4</address>
+        <salary></salary>
+    </employee>
+    <employee>
+        <id>2</id>
+        <name>16</name>
+        <age>floriaan van den brande</age>
+        <hireDate></hireDate>
+        <address>Tweebunder 4</address>
+        <salary></salary>
+    </employee>
+</employees>
