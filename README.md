@@ -12,7 +12,7 @@ The application will do the following:
 ## To emphasize:
 * JAXB stands for Java Architecture for XML Binding
 * no additional libraries needed (clean pom) as of Java 1.6 !!!
-* 2 domain objects : Employees vs DatabaseEmployee
+* 2 be.ictdynamic.training.domain objects : Employees vs DatabaseEmployee
 * Explain how to run a unit test rom within IntelliJ
 * usage of inner class. make inner class non-static and run again
 * certain fields are null

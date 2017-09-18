@@ -1,4 +1,4 @@
-package domain;
+package be.ictdynamic.training.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -32,7 +32,7 @@ public class Employees {
                 '}';
     }
 
-    private static class Employee {
+    public static class Employee {
 //    public class Employee {
         private Integer id;
         private String name;

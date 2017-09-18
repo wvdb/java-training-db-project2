@@ -1,9 +1,10 @@
-import domain.Employees;
+package junit;
+
+import be.ictdynamic.training.XMLFileProcessor;
+import be.ictdynamic.training.domain.Employees;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Created by wvdbrand on 18/09/2017.
@@ -11,8 +12,8 @@ import static org.junit.Assert.assertNull;
 public class TestJunit {
     @Test
     public void dummyTestHappyFlow() {
-        XMLFileProcessor xMLFileProcessor = new XMLFileProcessor();
-        Employees employees = xMLFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
+        XMLFileProcessor xmlFileProcessor = new XMLFileProcessor();
+        Employees employees = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
 
         // this way we avoid NPEs
 
