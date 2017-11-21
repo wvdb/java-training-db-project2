@@ -15,7 +15,7 @@ public class TestJunit {
         XMLFileProcessor xmlFileProcessor = new XMLFileProcessor();
         EmployeeFile employeeFile = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
 
-        // this way we avoid NPEs
+        // TODO : this way we avoid NPEs
 
         assertNotNull("employees should not be null", employeeFile);
         assertNotNull("employees.getEmployees should not be null", employeeFile.getEmployees());

@@ -45,7 +45,7 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-        <!-- Test dependencies : junit and cucumer -->
+        <!-- Test dependencies : junit and cucumber -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
