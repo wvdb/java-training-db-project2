@@ -1,6 +1,6 @@
 package be.ictdynamic.training;
 
-import be.ictdynamic.training.domain.Employees;
+import be.ictdynamic.training.domain.EmployeeFile;
 import org.apache.log4j.Logger;
 
 import javax.xml.bind.JAXBContext;
@@ -14,25 +14,25 @@ import java.io.File;
 public class XMLFileProcessor {
     private static final Logger LOGGER = Logger.getLogger(XMLFileProcessor.class);
 
-    public Employees unmarshalEmployeeXmlFileToEmployees(String fileName) {
+    public EmployeeFile unmarshalEmployeeXmlFileToEmployees(String fileName) {
         ClassLoader classLoader = this.getClass().getClassLoader();
         // TODO : explain warning of Intellij
         File file = new File(classLoader.getResource(fileName).getFile());
 
-        Employees employees = new Employees();
+        EmployeeFile employeeFile = new EmployeeFile();
 
         try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Employees.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(EmployeeFile.class);
 
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            employees = (Employees) jaxbUnmarshaller.unmarshal(file);
+            employeeFile = (EmployeeFile) jaxbUnmarshaller.unmarshal(file);
 
-            LOGGER.info("Employees have been retrieved. Employees: " + employees);
+            LOGGER.info("Employees have been retrieved. Employees: " + employeeFile);
         } catch (JAXBException e) {
             // TO DISCUSS : error handling
             LOGGER.error("!!!XML File " + fileName + " has NOT been processed successfully. Exception = " + e);
         }
 
-        return employees;
+        return employeeFile;
     }
 }

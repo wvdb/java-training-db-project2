@@ -1,6 +1,6 @@
 package bdd;
 
-import be.ictdynamic.training.domain.Employees;
+import be.ictdynamic.training.domain.EmployeeFile;
 import be.ictdynamic.training.XMLFileProcessor;
 
 import cucumber.api.java.en.And;
@@ -13,7 +13,7 @@ import static org.junit.Assert.assertThat;
 
 public class ProcessEmployeesXMLFileStepDefinitions {
     private XMLFileProcessor xmlFileProcessor;
-    private Employees employees;
+    private EmployeeFile employeeFile;
 
 	@Given("^there is a valid XML file$")
 	public void there_is_a_valid_XML_file() {
@@ -22,17 +22,21 @@ public class ProcessEmployeesXMLFileStepDefinitions {
 
 	@When("^the file has been processed$")
 	public void the_file_has_been_processed() {
-        employees = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
+        employeeFile = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
 	}
 
 	@Then("^employees should contain 2 entries$")
 	public void employees_should_contain_2_entries() {
-        assertThat(employees.getEmployees().size(), is(2));
+        assertThat(employeeFile.getEmployees().size(), is(2));
 	}
 
-    @And("^employee should be correct$")
-    public void employee_should_be_correct() {
-        assertThat(employees.getEmployees().get(0).getAge(), is(49));
-        assertThat(employees.getEmployees().get(0).getName(), is("wim van den brande"));
+    @And("^age should be correct$")
+    public void age_should_be_correct() {
+        assertThat(employeeFile.getEmployees().get(0).getAge(), is(49));
+    }
+
+    @And("^name should be correct$")
+    public void name_should_be_correct() {
+        assertThat(employeeFile.getEmployees().get(0).getName(), is("wim van den brande"));
     }
 }

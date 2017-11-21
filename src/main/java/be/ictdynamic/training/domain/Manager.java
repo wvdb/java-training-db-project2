@@ -10,7 +10,7 @@ public class Manager extends Worker {
     // every sub-class of worker has a hireDate, a worker doesn't
     private Date hireDate;
 
-    private Set<Employees> subordinates;
+    private Set<EmployeeFile> subordinates;
 
     public Manager(Integer id, String name, Integer age, Gender gender, Date hireDate) {
         super(id, name, age, gender);
@@ -30,11 +30,11 @@ public class Manager extends Worker {
         this.hireDate = hireDate;
     }
 
-    public Set<Employees> getSubordinates() {
+    public Set<EmployeeFile> getSubordinates() {
         return subordinates;
     }
 
-    public void setSubordinates(Set<Employees> subordinates) {
+    public void setSubordinates(Set<EmployeeFile> subordinates) {
         this.subordinates = subordinates;
     }
 }

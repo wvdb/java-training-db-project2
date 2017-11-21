@@ -7,13 +7,15 @@ The application will do the following:
 * It will create a database
 * It will open an XML file (a file with a number of employees)
 * It will parse the XML file (unmarshal)
-* It will import the employees (TBD)
+* It will import the employees
+* remark 1: no XSD is being used (rootelement annotation has been added manually)
+* remark 2: cucumber has been added as plugin
 
 ## To emphasize:
 * JAXB stands for Java Architecture for XML Binding
 * no additional libraries needed (clean pom) as of Java 1.6 !!!
 * 2 be.ictdynamic.training.domain objects : Employees vs DatabaseEmployee
-* Explain how to run a unit test rom within IntelliJ
+* Explain how to run a unit test from within IntelliJ
 * usage of inner class. make inner class non-static and run again
 * certain fields are null
 * date : specific format !!!

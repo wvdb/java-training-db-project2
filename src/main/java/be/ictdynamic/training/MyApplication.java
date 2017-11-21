@@ -1,6 +1,6 @@
 package be.ictdynamic.training;
 
-import be.ictdynamic.training.domain.Employees;
+import be.ictdynamic.training.domain.EmployeeFile;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -28,7 +28,7 @@ public class MyApplication {
             LOGGER.info("Created database successfully");
 
             XMLFileProcessor xmlFileProcessor = new XMLFileProcessor();
-            Employees employees = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
+            EmployeeFile employeeFile = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
             LOGGER.info("XML File employees.xml has been processed successfully");
 
             long end = System.currentTimeMillis();

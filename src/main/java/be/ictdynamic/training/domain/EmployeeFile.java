@@ -12,7 +12,7 @@ import java.util.List;
  */
 @XmlRootElement(name = "employees")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Employees {
+public class EmployeeFile {
 
     @XmlElement(name = "employee")
     private List<Employee> employees = null;
