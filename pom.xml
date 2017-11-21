@@ -6,7 +6,7 @@
 
     <groupId>be.ictdynamic.training</groupId>
     <artifactId>DB-Project2</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
