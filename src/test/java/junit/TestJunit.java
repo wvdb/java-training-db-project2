@@ -4,6 +4,8 @@ import be.ictdynamic.training.XMLFileProcessor;
 import be.ictdynamic.training.domain.EmployeeFile;
 import org.junit.Test;
 
+import javax.xml.bind.JAXBException;
+
 import static org.junit.Assert.*;
 
 /**
@@ -13,7 +15,12 @@ public class TestJunit {
     @Test
     public void dummyTestHappyFlow() {
         XMLFileProcessor xmlFileProcessor = new XMLFileProcessor();
-        EmployeeFile employeeFile = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
+        EmployeeFile employeeFile = null;
+        try {
+            employeeFile = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
 
         // TODO : this way we avoid NPEs
 

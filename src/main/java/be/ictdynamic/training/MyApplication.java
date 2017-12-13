@@ -14,6 +14,7 @@ import java.sql.SQLException;
 public class MyApplication {
 
     private static final Logger LOGGER = Logger.getLogger(MyApplication.class);
+    public static final String EMPLOYEE_XML_FILE = "employees.xml";
 
     public static void main(String args[]) {
         Connection connection = null;
@@ -27,9 +28,8 @@ public class MyApplication {
             CreateDatabase.createTables(connection);
             LOGGER.info("Created database successfully");
 
-            XMLFileProcessor xmlFileProcessor = new XMLFileProcessor();
-            EmployeeFile employeeFile = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("employees.xml");
-            LOGGER.info("XML File employees.xml has been processed successfully");
+            EmployeeFile employeeFile = new XMLFileProcessor().unmarshalEmployeeXmlFileToEmployees(EMPLOYEE_XML_FILE);
+            LOGGER.info(String.format("XML File %s has been processed successfully", EMPLOYEE_XML_FILE));
 
             long end = System.currentTimeMillis();
             LOGGER.info(String.format("Processing XML File took %06d milliseconds", (end - start)));

@@ -14,12 +14,16 @@ import java.io.File;
 public class XMLFileProcessor {
     private static final Logger LOGGER = Logger.getLogger(XMLFileProcessor.class);
 
-    public EmployeeFile unmarshalEmployeeXmlFileToEmployees(String fileName) {
+    public static final String EXCEPTION_MESSAGE_XML_FILE_DOES_NOT_EXIST = "xml file does not exist";
+
+    public EmployeeFile unmarshalEmployeeXmlFileToEmployees(String fileName) throws JAXBException {
         ClassLoader classLoader = this.getClass().getClassLoader();
-        // TODO : explain warning of Intellij
+        if (classLoader.getResource(fileName) == null) {
+            throw new IllegalArgumentException(EXCEPTION_MESSAGE_XML_FILE_DOES_NOT_EXIST);
+        }
         File file = new File(classLoader.getResource(fileName).getFile());
 
-        EmployeeFile employeeFile = new EmployeeFile();
+        EmployeeFile employeeFile = null;
 
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(EmployeeFile.class);
@@ -27,10 +31,10 @@ public class XMLFileProcessor {
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
             employeeFile = (EmployeeFile) jaxbUnmarshaller.unmarshal(file);
 
-            LOGGER.info("Employees have been retrieved. Employees: " + employeeFile);
+            LOGGER.info("Employees have been retrieved. # of employees: " + (employeeFile == null ? 0 : employeeFile.getEmployees().size()));
         } catch (JAXBException e) {
-            // TO DISCUSS : error handling
             LOGGER.error("!!!XML File " + fileName + " has NOT been processed successfully. Exception = " + e);
+            throw e;
         }
 
         return employeeFile;
