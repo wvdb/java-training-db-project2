@@ -36,7 +36,7 @@ public class ProcessEmployeesXMLFileStepDefinitions {
     }
 
     @When("^a not existing file has been processed$")
-    public void aNotExistingFileHasBeenProcessed() {
+    public void aFileThatDoesNotExistHasBeenProcessed() {
         try {
             employeeFile = xmlFileProcessor.unmarshalEmployeeXmlFileToEmployees("this-file-does-not-exist.xml");
         } catch (Exception e) {
