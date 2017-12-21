@@ -49,4 +49,13 @@ public final class DateUtility {
         return java.sql.Date.valueOf(localDate);
     }
 
+    public final static Integer calculateLengthOfString(String myString) {
+        if (myString == null) {
+            return null;
+        }
+        else {
+            return new Integer(myString.length());
+        }
+    }
+
 }

@@ -11,5 +11,5 @@ import org.junit.runner.RunWith;
 	features = {"classpath:features"},
 	snippets = SnippetType.CAMELCASE
 )
-public class CucumberTests {
+public class CucumberTest {
 }

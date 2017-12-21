@@ -49,4 +49,5 @@ public class OCACertificationStepDefinitions {
         assertThat(isCertified(), is(true));
         assertThat(getScore() > minimumScore , is(true));
     }
+
 }
