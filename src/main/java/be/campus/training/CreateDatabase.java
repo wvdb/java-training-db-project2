@@ -1,4 +1,4 @@
-package be.ictdynamic.training;
+package be.campus.training;
 
 import org.apache.log4j.Logger;
 

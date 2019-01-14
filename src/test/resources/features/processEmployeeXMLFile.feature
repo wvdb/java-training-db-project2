@@ -7,6 +7,7 @@ Feature: process Employee XML File
     And age should be correct
     And name should be correct
     And hire-date should be correct
+    And ssn should be correct
 
   Scenario: Sad flow
     Given there is an XML File Processor

@@ -1,4 +1,4 @@
-package be.ictdynamic.training.utilities;
+package be.campus.training.utilities;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

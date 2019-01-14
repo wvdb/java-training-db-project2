@@ -1,4 +1,4 @@
-package be.ictdynamic.training.domain;
+package be.campus.training.domain;
 
 import java.util.Date;
 import java.util.Set;

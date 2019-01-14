@@ -1,7 +1,7 @@
 package junit;
 
-import be.ictdynamic.training.XMLFileProcessor;
-import be.ictdynamic.training.domain.EmployeeFile;
+import be.campus.training.XMLFileProcessor;
+import be.campus.training.domain.EmployeeFile;
 import org.junit.Test;
 
 import javax.xml.bind.JAXBException;

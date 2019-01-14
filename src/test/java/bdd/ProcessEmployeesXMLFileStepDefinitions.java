@@ -1,8 +1,9 @@
 package bdd;
 
-import be.ictdynamic.training.XMLFileProcessor;
-import be.ictdynamic.training.domain.EmployeeFile;
-import be.ictdynamic.training.utilities.DateUtility;
+import be.campus.training.XMLFileProcessor;
+import be.campus.training.domain.EmployeeFile;
+import be.campus.training.utilities.DateUtility;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -69,5 +70,11 @@ public class ProcessEmployeesXMLFileStepDefinitions {
         assertThat(exceptions.size(), is(1));
         assertThat(exceptions.get(0), instanceOf(IllegalArgumentException.class));
         assertThat(exceptions.get(0).getMessage(), is(XMLFileProcessor.EXCEPTION_MESSAGE_XML_FILE_DOES_NOT_EXIST));
+    }
+
+    @And("^ssn should be correct$")
+    public void ssnShouldBeCorrect() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 }

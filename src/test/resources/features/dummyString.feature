@@ -14,6 +14,7 @@ Feature: Test Dummy String Feature
     Examples:
     | value       | length_of_value |
     | monday      | 6               |
+    | tuesday     | 5               |
     | Saturday    | 8               |
 #    | null        | null            |
 

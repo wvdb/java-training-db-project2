@@ -1,4 +1,4 @@
-package be.ictdynamic.training.domain;
+package be.campus.training.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

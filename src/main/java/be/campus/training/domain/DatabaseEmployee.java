@@ -1,4 +1,4 @@
-package be.ictdynamic.training.domain;
+package be.campus.training.domain;
 
 import java.util.Date;
 import java.util.LinkedHashSet;
@@ -7,6 +7,7 @@ import java.util.Set;
 /**
  * Created by wvdbrand on 24/08/2017.
  */
+//@Entity
 public class DatabaseEmployee extends Worker {
     // every sub-class of worker has a hireDate, a worker doesn't
     private Date hireDate;

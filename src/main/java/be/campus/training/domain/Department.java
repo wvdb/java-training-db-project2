@@ -1,12 +1,18 @@
-package be.ictdynamic.training.domain;
+package be.campus.training.domain;
+
+import javax.persistence.Entity;
 
 /**
  * Created by wvdbrand on 6/09/2017.
  */
+@Entity
 public class Department extends DatabaseEntity {
     private String departmentName;
     private String departmentAddress;
     private Manager departmentManager;
+
+    public Department() {
+    }
 
     private Department(DepartmentBuilder builder) {
         this.departmentName = builder.nestedDepartmentName;
